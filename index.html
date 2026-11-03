@@ -7,15 +7,22 @@
     <meta name="description"
         content="An interactive digital twin of the Engineering Laboratory: what it is, why it matters and a navigable 3D preview.">
     <meta name="author" content="Samuel Ospino">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Digital Twins in the Engineering Lab</title>
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Primary">
-            <a href="#top">DigiTwin</a>
-            <ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="brand" href="#top">DigiTwin</a>
+            <ul class="nav-links">
                 <li><a href="#definition">Definition</a></li>
                 <li><a href="#impact">Impact</a></li>
                 <li><a href="#twin">Live twin</a></li>
@@ -26,45 +33,44 @@
                 <button type="button" lang="en" aria-pressed="true">EN</button>
                 <button type="button" lang="es" aria-pressed="false">ES</button>
             </div>
-            <a href="#twin">Open the twin</a>
+            <a class="btn btn--primary nav-cta" href="#twin">Open the twin</a>
         </nav>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
 
-        <section id="top">
-            <p>Digital twin · Automation &amp; Electronics Lab</p>
-            <h1>Test the lab before you touch it!</h1>
-            <p>The lab runs dozens of projects every year. A digital twin gives students a working model of the
-                equipment, so they can test a design before they build it — and mistakes cost time in the model, not in
-                the lab.</p>
-            <div>
-                <a href="#twin">Explore the 3D Model</a>
-                <a href="#definition">Start learning</a>
+        <section id="top" class="section hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Digital twin · Automation &amp; Electronics Lab</p>
+                <h1>Test the lab before you touch it!</h1>
+                <p class="hero-lede">The lab runs dozens of projects every year. A digital twin gives students a
+                    working model of the equipment, so they can test a design before they build it — and mistakes cost
+                    time in the model, not in the lab.</p>
+                <div class="hero-actions">
+                    <a class="btn btn--primary" href="#twin">Explore the 3D Model</a>
+                    <a class="btn btn--ghost" href="#definition">Start learning</a>
+                </div>
+                <ul class="hero-stats">
+                    <li>06 monitored assets</li>
+                    <li>24/7 Access</li>
+                    <li>10 Hz telemetry</li>
+                </ul>
+                <p class="hero-credit">Background: illustrative render, not the real lab.</p>
             </div>
-            <ul>
-                <li> 06 monitored assets</li>
-                <li> 24/7 Access</li>
-                <li> 10 Hz telemetry</li>
-            </ul>
-            <figure>
-                <img src="src/lab.webp" alt="Engineers simulating a turbine in a digital environment.">
-                <figcaption>Illustrative render: a physical asset and its digital twin.</figcaption>
-            </figure>
         </section>
 
-        <section id="definition">
-            <header>
-                <p>01 - CONCEPT</p>
-                <h2> A digital reflection of a lab that never stands still.</h2>
+        <section id="definition" class="section">
+            <header class="section-head">
+                <p class="eyebrow">01 - CONCEPT</p>
+                <h2>A digital reflection of a lab that never stands still.</h2>
                 <p>A digital twin is a virtual representation of a physical object or system that uses real-time data to accurately reflect the behavior, performance, and conditions of its real-world counterpart.
                     Digital twins enable the continuous monitoring, simulation, and analysis of an object, product, or system throughout its lifecycle—from design and production to maintenance and decommissioning. They can also incorporate external processes and critical variables that affect an asset’s performance.
                 </p>
             </header>
-            <div>
+            <div class="compare-block">
                 <h3>Three things that aren't the same!</h3>
 
-                <ul id="compare">
+                <ul class="compare">
                     <li>
                         <h4>3D model</h4>
                         <p>It is a geometric or visual representation of an object, space, or structure in three dimensions (X, Y, and Z axes). It is the model used in the lab for various purposes, such as 3D printing or modifying a design.</p>
@@ -79,101 +85,103 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <article>
+            <div class="pillars">
+                <article class="pillar">
                     <h3>Physical Asset</h3>
                     <p>The machines, benches, sensors, and people at the Automation and Electronics Laboratory.</p>
                 </article>
-                <article>
+                <article class="pillar">
                     <h3>VIRTUAL MODEL</h3>
                     <p>Geometry, physics, and operating rules that behave like the actual equipment</p>
                 </article>
-                <article>
+                <article class="pillar">
                     <h3>LIVE DATA</h3>
                     <p>PLCs, IoT nodes, and session logs that transmit status and usage data at 1–10 Hz.</p>
                 </article>
-                <article>
+                <article class="pillar">
                     <h3>Feedback</h3>
                     <p>Predictions and simulations that are fed back into the laboratory in the form of maintenance, planning, or teaching decisions.</p>
                 </article>
             </div>
             <figure class="loop-figure">
-    <div class="loop">
-        <div class="loop-ring" aria-hidden="true"></div>
-        <span class="loop-node n1">Physical lab</span>
-        <span class="loop-node n2">Data stream</span>
-        <span class="loop-node n3">Virtual twin</span>
-        <span class="loop-node n4">Decisions</span>
-        <div class="loop-center">Closed loop</div>
-    </div>
-    <figcaption>Figure 1 — The lab feeds the model; the model returns decisions.</figcaption>
-</figure>
+                <div class="loop">
+                    <div class="loop-ring" aria-hidden="true"></div>
+                    <span class="loop-node n1">Physical lab</span>
+                    <span class="loop-node n2">Data stream</span>
+                    <span class="loop-node n3">Virtual twin</span>
+                    <span class="loop-node n4">Decisions</span>
+                    <div class="loop-center">Closed loop</div>
+                </div>
+                <figcaption>Figure 1 — The lab feeds the model; the model returns decisions.</figcaption>
+            </figure>
         </section>
 
-        <section id="impact">
-            <header>
-                <p>02 - IMPACT</p>
+        <section id="impact" class="section">
+            <header class="section-head">
+                <p class="eyebrow">02 - IMPACT</p>
                 <h2>What the twin gives the lab</h2>
                 <p>For a teaching lab, the value is not the 3D view. It is recovered bench time, failures that never happen and lessons students can replay.</p>
             </header>
-            <ul>
+            <ul class="stats">
                 <li>24/7 remote access</li>
                 <li>+30% equipment availability</li>
                 <li>30% time saved per project</li>
                 <li>−35% unplanned downtime</li>
             </ul>
             <p class="stats-note">Projected impact for a first-year pilot.</p>
-            <div>
-                <article>
+            <div class="impact-grid">
+                <article class="impact-card">
                     <h3>Predictive Maintenance</h3>
                     <p>Based on the constant monitoring of equipment to detect anomalies using algorithms to predict failures before they occur.</p>
                 </article>
-                <article>
+                <article class="impact-card">
                     <h3>Cost Savings</h3>
                     <p>Simulation in a virtual environment can directly lead to cost and time savings, resulting in greater efficiency and quality. Avoiding costly failures and optimizing processes also contributes to cost savings.</p>
                 </article>
-                <article>
+                <article class="impact-card">
                     <h3>Promoting Sustainability</h3>
                     <p>Through simulation, the lab can identify environmental impacts, inefficient equipment or waste, and optimize the use of resources.</p>
                 </article>
-                <article>
+                <article class="impact-card">
                     <h3>Simulation before installation</h3>
                     <p>Before a new bench or layout is installed, the twin can test it: space, power, airflow and workflow, without moving a single machine.</p>
                 </article>
-                <article>
+                <article class="impact-card">
                     <h3>Safe fault practice</h3>
                     <p>Students inject a jam, a sensor failure or an emergency stop and diagnose it in the model, without risking the equipment.</p>
                 </article>
-                <article>
+                <article class="impact-card">
                     <h3>Industry-ready students</h3>
                     <p>Students work with the same stack used in Industry 4.0 plants: OPC UA, MQTT and digital twins.</p>
                 </article>
             </div>
         </section>
 
-        <section id="twin">
-            <header>
-                <p>03 - LIVE PREVIEW</p>
+        <section id="twin" class="section">
+            <header class="section-head">
+                <p class="eyebrow">03 - LIVE PREVIEW</p>
                 <h2>Walk through the twin</h2>
                 <p>Orbit the room, open an asset and watch its condition change. The panel shows the same variables a real twin would read from the PLC.</p>
                 <p>The model is not connected to physical equipment. All telemetry is simulated.</p>
             </header>
-            <figure>
-                <canvas>This demo needs WebGL. The asset data is still available below.</canvas>
-                <figcaption>Simulated telemetry · not connected to real equipment.</figcaption>
-            </figure>
-            <aside class="twin-panel">
-                <p class="panel-kicker">ASSET 01 · ROBOT CELL</p>
-                <h3>Six-axis robot</h3>
-                <p class="panel-status">Nominal</p>
-                <dl>
-                    <div><dt>Temperature</dt><dd>42.6 °C</dd></div>
-                    <div><dt>Vibration</dt><dd>0.82 mm/s</dd></div>
-                    <div><dt>Power</dt><dd>1.8 kW</dd></div>
-                    <div><dt>Remaining life</dt><dd>128 h</dd></div>
-                </dl>
-                <p class="panel-sync">Last sync 0.4 s ago</p>
-            </aside>
+            <div class="twin-stage">
+                <figure class="twin-view">
+                    <canvas>This demo needs WebGL. The asset data is still available below.</canvas>
+                    <figcaption>Simulated telemetry · not connected to real equipment.</figcaption>
+                </figure>
+                <aside class="twin-panel">
+                    <p class="panel-kicker">ASSET 01 · ROBOT CELL</p>
+                    <h3>Six-axis robot</h3>
+                    <p class="panel-status">Nominal</p>
+                    <dl>
+                        <div><dt>Temperature</dt><dd>42.6 °C</dd></div>
+                        <div><dt>Vibration</dt><dd>0.82 mm/s</dd></div>
+                        <div><dt>Power</dt><dd>1.8 kW</dd></div>
+                        <div><dt>Remaining life</dt><dd>128 h</dd></div>
+                    </dl>
+                    <p class="panel-sync">Last sync 0.4 s ago</p>
+                </aside>
+            </div>
             <ul class="twin-log">
                 <li><time>08:42</time> Robot cell: axis 2 temperature above baseline.</li>
                 <li><time>08:41</time> Conveyor: part count reached 1,240.</li>
@@ -182,73 +190,71 @@
             </ul>
         </section>
 
-        <section id="stack">
-            <header>
-                <p>04 - THE STACK</p>
+        <section id="stack" class="section">
+            <header class="section-head">
+                <p class="eyebrow">04 - THE STACK</p>
                 <h2>From sensor to decision in four hops.</h2>
                 <p>No proprietary lock-in: the pilot starts with one bench and grows one asset at a time.</p>
             </header>
-            <ol>
-                <li>
+            <ol class="flow">
+                <li class="flow-step">
                     <h3>Instrument</h3>
                     <p>Current clamps, vibration sensors and temperature probes, plus the tags the PLC already exposes.</p>
                 </li>
-                <li>
+                <li class="flow-step">
                     <h3>Edge</h3>
                     <p>An industrial gateway samples at 1–10 Hz and publishes a time-stamped stream over MQTT or OPC UA.</p>
                 </li>
-                <li>
+                <li class="flow-step">
                     <h3>Twin</h3>
                     <p>The model ingests telemetry, runs its behaviour rules and updates the state of every asset.</p>
                 </li>
-                <li>
+                <li class="flow-step">
                     <h3>Act</h3>
                     <p>Dashboards, alerts, maintenance schedules and classroom exercises consume the result.</p>
                 </li>
             </ol>
         </section>
 
-        <section id="roadmap">
-            <header>
-                <p>05 - THE PLAN</p>
+        <section id="roadmap" class="section">
+            <header class="section-head">
+                <p class="eyebrow">05 - THE PLAN</p>
                 <h2>Start with one bench.</h2>
                 <p>A full lab twin is a programme, not a purchase. Three phases, each useful on its own.</p>
             </header>
-            <ol>
-                <li>
+            <ol class="phases">
+                <li class="phase">
                     <h3>Phase 01 — Instrument one bench</h3>
                     <p>Weeks 1–6. Add 8–12 sensors to the robot cell and publish the tags the PLC already knows. Output: one live data stream.</p>
                 </li>
-                <li>
+                <li class="phase">
                     <h3>Phase 02 — Build the twin</h3>
                     <p>Weeks 7–16. Model the geometry, encode the operating states and connect this dashboard to real data. Output: a connected twin.</p>
                 </li>
-                <li>
+                <li class="phase">
                     <h3>Phase 03 — Predict and teach</h3>
                     <p>Months 5–9. Train simple failure models on the collected history and turn them into course material. Output: a predictive lab.</p>
                 </li>
             </ol>
         </section>
 
-        <section id="closing">
-            <p>06 - TAKEAWAY</p>
-            <h2>The lab already holds the data. The twin gives it a voice.</h2>
-            <p>Every cable, sensor and session in the laboratory produces a signal. A digital twin turns those signals into understanding — for the people who maintain the lab and for the students who learn inside it.</p>
-            <a href="#twin">Replay the twin</a>
+        <section id="closing" class="section closing">
+            <header class="section-head">
+                <p class="eyebrow">06 - TAKEAWAY</p>
+                <h2>The lab already holds the data. The twin gives it a voice.</h2>
+                <p>Every cable, sensor and session in the laboratory produces a signal. A digital twin turns those signals into understanding — for the people who maintain the lab and for the students who learn inside it.</p>
+            </header>
+            <a class="btn btn--primary" href="#twin">Replay the twin</a>
         </section>
     </main>
 
 
-    <footer>
+    <footer class="site-footer">
         <p>DigiTwin — Digital Twin Lab</p>
         <p>English project · Faculty of Engineering · 2026</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
-
-
-
-
 
 </body>
 
