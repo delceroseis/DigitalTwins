@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Digital twins: How do they help us in an educational environment within the institution? - Developed by Samuel Ospino">
+    <meta name="Description"
+        content="Digital twins: How do they help us in an educational environment within the institution? - Developed by Samuel Ospino">
     <link rel="stylesheet" href="style.css">
     <title>Digital Twins in the Engineering Lab.</title>
 </head>
+
 <body>
     <header>
         <nav aria-label="Primary">
-            <a href="#top">Logo</a>
+            <a href="#top">DigiTwin</a>
             <ul>
                 <li><a href="#definition">Definition</a></li>
                 <li><a href="#impact">impact</a></li>
@@ -18,46 +21,88 @@
                 <li><a href="#stack">stack</a></li>
                 <li><a href="#roadmap">roadmap</a></li>
             </ul>
-            <div>EN/ES</div>
-            <a href="#twin">CTA CORTO</a>
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" lang="en" aria-pressed="true">EN</button>
+                <button type="button" lang="es" aria-pressed="false">ES</button>
+            </div>
+            <a href="#twin">Explore the 3D World</a>
         </nav>
     </header>
 
     <main id="main">
 
         <section id="top">
-            <p>ETIQUETA PEQUEÑA (FACULTAD + TEMA)</p>
-            <h1>Titular + Máximo 2 lineas</h1>
-            <p>SUBTÍTULO DE 25-35 PALABRAS</p> 
+            <p>Digital Twin · Automation and resource management.</p>
+            <h1>Test the lab before you touch it!</h1>
+            <p>The lab runs dozens of projects every year. A digital twin gives students a working model of the
+                equipment, so they can test a design before they build it — and mistakes cost time in the model, not in
+                the lab.</p>
             <div>
-                <a href="#twin">CTA PRIMARIO</a>
-                <a href="#definition">CTA SECUNDARIO</a>
+                <a href="#twin">Explore the 3D Model</a>
+                <a href="#definition">Start learning</a>
             </div>
             <ul>
-                <li> DATO 1: LABORATIORIO</li>
-                <li> DATO 2: ACTIVOS</li>
-                <li> DATO 3: TIPO DE DATOS</li>
+                <li> 06 monitored assets</li>
+                <li> 24/7 Access</li>
+                <li> 10 Hz telemetry</li>
             </ul>
             <figure>
-                <img src="src/logo.jpg" alt="DESCRIPCIÓN REAL DE LA IMAGEN">
-                <figcaption>NOTA O CRÉDITO</figcaption>
+                <img src="src/lab.webp" alt="Engineers simulating a turbine in a digital environment.">
+                <figcaption>Engineering Lab Presentation</figcaption>
             </figure>
         </section>
 
         <section id="definition">
             <header>
                 <p>01 - CONCEPT</p>
-                <h2> TÍTULO DE LA SECCIÓN</h2>
-                <p>PÁRRAFO DE ENTRADA</p>
+                <h2> A digital reflection of a lab that never stands still.</h2>
+                <p>A digital twin is a virtual representation of a physical object or system that uses real-time data to accurately reflect the behavior, performance, and conditions of its real-world counterpart.
+                    Digital twins enable the continuous monitoring, simulation, and analysis of an object, product, or system throughout its lifecycle—from design and production to maintenance and decommissioning. They can also incorporate external processes and critical variables that affect an asset’s performance.
+                </p>
             </header>
-            <div>COMPARACIÓN: MODELO 3D / DASHBOARD / GEMELO</div>
             <div>
-                <article><h3>PILAR 1 </h3> <p>...</p></article>
-                <article><h3>PILAR 2 </h3> <p>...</p></article>
-                <article><h3>PILAR 3 </h3> <p>...</p></article>
-                <article><h3>PILAR 4 </h3><p>...</p></article>
+                <h2>Three things that aren't the same!</h2>
+
+                <ul id="Compare">
+                    <li>3D MODEL</li>
+                     <p>It is a geometric or visual representation of an object, space, or structure in three dimensions (X, Y, and Z axes). It is the model used in the lab for various purposes, such as printing or modifying it.</p>
+
+                       <li>DASHBOARD</li>
+                         <p>It is a graphical interface or data visualizer that displays metrics, key performance indicators (KPIs), and statistics in real time or through charts (tables, bar charts, line charts). Can't answer "...what if?"</p>
+
+                          <li>DIGITAL TWIN</li>
+                            <p>It is a dynamic and advanced virtual replica of a physical object, a system, or a real-world process. It provides answers to the various questions that arise during the process.</p>
+                </ul>
             </div>
-            <figure>DIAGRAMA DEL CICLO CERRADO</figure>
+            <div>
+                <article>
+                    <h3>Physical Asset</h3>
+                    <p>The machines, benches, sensors, and people at the Automation and Electronics Laboratory.</p>
+                </article>
+                <article>
+                    <h3>VIRTUAL MODEL</h3>
+                    <p>Geometry, physics, and operating rules that behave like the actual equipment</p>
+                </article>
+                <article>
+                    <h3>LIVE DATA</h3>
+                    <p>PLCs, IoT nodes, and session logs that transmit status and usage data at 1–10 Hz.</p>
+                </article>
+                <article>
+                    <h3>Feedback</h3>
+                    <p>Predictions and simulations that are fed back into the laboratory in the form of maintenance, planning, or teaching decisions.</p>
+                </article>
+            </div>
+            <figure class="loop-figure">
+    <div class="loop">
+        <div class="loop-ring" aria-hidden="true"></div>
+        <span class="loop-node n1">Physical lab</span>
+        <span class="loop-node n2">Data stream</span>
+        <span class="loop-node n3">Virtual twin</span>
+        <span class="loop-node n4">Decisions</span>
+        <div class="loop-center">Closed loop</div>
+    </div>
+    <figcaption>Figure 1 — The lab feeds the model; the model returns decisions.</figcaption>
+</figure>
         </section>
 
         <section id="impact">
@@ -73,12 +118,30 @@
                 <li>OPCIÓN 4</li>
             </ul>
             <div>
-                <article><h3>BENEFICIO 1 </h3> <p>...</p></article>
-                <article><h3>BENEFICIO 2 </h3><p>...</p></article>
-                <article><h3>BENEFICIO 3 </h3> <p>...</p></article>
-                <article><h3>BENEFICIO 4 </h3> <p>...</p></article>
-                <article><h3>BENEFICIO 5 </h3> <p>...</p></article>
-                <article><h3>BENEFICIO 6 </h3> <p>...</p></article>
+                <article>
+                    <h3>BENEFICIO 1 </h3>
+                    <p>...</p>
+                </article>
+                <article>
+                    <h3>BENEFICIO 2 </h3>
+                    <p>...</p>
+                </article>
+                <article>
+                    <h3>BENEFICIO 3 </h3>
+                    <p>...</p>
+                </article>
+                <article>
+                    <h3>BENEFICIO 4 </h3>
+                    <p>...</p>
+                </article>
+                <article>
+                    <h3>BENEFICIO 5 </h3>
+                    <p>...</p>
+                </article>
+                <article>
+                    <h3>BENEFICIO 6 </h3>
+                    <p>...</p>
+                </article>
             </div>
         </section>
 
@@ -93,7 +156,9 @@
                 <figcaption>TELEMETRÍA SIMULADA</figcaption>
             </figure>
             <aside>PANEL DE DATOS DEL EQUIPO SELECCIONADO</aside>
-            <ul>REGISTRO DE EVENTOS</ul>
+            <ul>
+                <li>OPCIÓN 1</li>
+            </ul>
         </section>
 
         <section id="stack">
@@ -103,10 +168,22 @@
                 <p>PÁRRAFO DE ENTRADA</p>
             </header>
             <ol>
-                <li><h3>INSTRUMENT</h3><p>..</p></li>
-                <li><h3>EDGE</h3><p>..</p></li>
-                <li><h3>TWIN</h3><p>..</p></li>
-                <li><h3>ACT</h3><p>..</p></li>
+                <li>
+                    <h3>INSTRUMENT</h3>
+                    <p>..</p>
+                </li>
+                <li>
+                    <h3>EDGE</h3>
+                    <p>..</p>
+                </li>
+                <li>
+                    <h3>TWIN</h3>
+                    <p>..</p>
+                </li>
+                <li>
+                    <h3>ACT</h3>
+                    <p>..</p>
+                </li>
             </ol>
         </section>
 
@@ -117,9 +194,18 @@
                 <p>PÁRRAFO DE ENTRADA</p>
             </header>
             <ol>
-                <li><h3>FASE 01</h3><p>...</p></li>
-                <li><h3>FASE 02</h3><p>...</p></li>
-                <li><h3>FASE 03</h3><p>...</p></li>
+                <li>
+                    <h3>FASE 01</h3>
+                    <p>...</p>
+                </li>
+                <li>
+                    <h3>FASE 02</h3>
+                    <p>...</p>
+                </li>
+                <li>
+                    <h3>FASE 03</h3>
+                    <p>...</p>
+                </li>
             </ol>
         </section>
 
@@ -138,10 +224,11 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    
+
 
 
 
 
 </body>
+
 </html>
