@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>document.documentElement.classList.add("js");</script>
     <meta name="description"
-        content="An interactive digital twin of the Engineering Laboratory: what it is, why it matters and a navigable 3D preview.">
+        content="An interactive digital twin of the Engineering Laboratory: what it is, why it matters and a navigable 3D preview."
+        data-es="Un gemelo digital interactivo del Laboratorio de Ingeniería: qué es, por qué importa y una vista previa 3D navegable.">
     <meta name="author" content="Samuel Ospino">
+      <link rel="icon" type="image/png" href="src/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,23 +20,26 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-es="Saltar al contenido">Skip to content</a>
 
     <header class="site-header">
-        <nav class="site-nav" aria-label="Primary">
-            <a class="brand" href="#top">DigiTwin</a>
+        <nav class="site-nav" aria-label="Primary" data-es-aria="Principal">
+            <a class="brand" href="#top" aria-label="DigiTwin — home" data-es-aria="DigiTwin — inicio">
+                <img src="src/logo-nav.png" alt="DigiTwin" width="480" height="268"
+                    data-es-alt="DigiTwin — Laboratorio de Gemelos Digitales">
+            </a>
             <ul class="nav-links">
-                <li><a href="#definition">Definition</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#twin">Live twin</a></li>
-                <li><a href="#stack">Architecture</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#definition" data-es="Definición">Definition</a></li>
+                <li><a href="#impact" data-es="Impacto">Impact</a></li>
+                <li><a href="#twin" data-es="Gemelo en vivo">Live twin</a></li>
+                <li><a href="#stack" data-es="Arquitectura">Architecture</a></li>
+                <li><a href="#roadmap" data-es="Hoja de ruta">Roadmap</a></li>
             </ul>
-            <div class="lang-switch" role="group" aria-label="Language">
+            <div class="lang-switch" role="group" aria-label="Language" data-es-aria="Idioma">
                 <button type="button" lang="en" aria-pressed="true">EN</button>
                 <button type="button" lang="es" aria-pressed="false">ES</button>
             </div>
-            <a class="btn btn--primary nav-cta" href="#twin">Open the twin</a>
+            <a class="btn btn--primary nav-cta" href="#twin" data-es="Abrir el gemelo">Open the twin</a>
         </nav>
     </header>
 
@@ -42,226 +47,321 @@
 
         <section id="top" class="section hero">
             <div class="hero-copy" data-reveal>
-                <p class="eyebrow">Digital twin · Automation &amp; Electronics Lab</p>
-                <h1>Test the lab before you touch it!</h1>
-                <p class="hero-lede">The lab runs dozens of projects every year. A digital twin gives students a
+                <p class="eyebrow" data-es="Gemelo digital · Laboratorio de Automatización y Electrónica">Digital twin ·
+                    Automation &amp; Electronics Lab</p>
+                <h1 data-es="¡Prueba el laboratorio antes de tocarlo!">Test the lab before you touch it!</h1>
+                <p class="hero-lede"
+                    data-es="El laboratorio ejecuta decenas de proyectos cada año. Un gemelo digital da a los estudiantes un modelo funcional de los equipos, para que puedan probar un diseño antes de construirlo — y los errores cuestan tiempo en el modelo, no en el laboratorio.">
+                    The lab runs dozens of projects every year. A digital twin gives students a
                     working model of the equipment, so they can test a design before they build it — and mistakes cost
                     time in the model, not in the lab.</p>
                 <div class="hero-actions">
-                    <a class="btn btn--primary" href="#twin">Explore the 3D Model</a>
-                    <a class="btn btn--ghost" href="#definition">Start learning</a>
+                    <a class="btn btn--primary" href="#twin" data-es="Explorar el modelo 3D">Explore the 3D Model</a>
+                    <a class="btn btn--ghost" href="#definition" data-es="Empezar a aprender">Start learning</a>
                 </div>
                 <ul class="hero-stats">
-                    <li>06 monitored assets</li>
-                    <li>24/7 Access</li>
-                    <li>10 Hz telemetry</li>
+                    <li data-es="06 activos monitorizados">06 monitored assets</li>
+                    <li data-es="Acceso 24/7">24/7 Access</li>
+                    <li data-es="Telemetría a 10 Hz">10 Hz telemetry</li>
                 </ul>
-                <p class="hero-credit">Background: illustrative render, not the real lab.</p>
+                <p class="hero-credit" data-es="Fondo: render ilustrativo, no es el laboratorio real de la Americana.">Background:
+                    illustrative render, not the actual lab at the Americana University.</p>
             </div>
         </section>
 
         <section id="definition" class="section">
             <header class="section-head" data-reveal>
-                <p class="eyebrow">01 - CONCEPT</p>
-                <h2>A digital reflection of a lab that never stands still.</h2>
-                <p>A digital twin is a virtual representation of a physical object or system that uses real-time data to accurately reflect the behavior, performance, and conditions of its real-world counterpart.
-                    Digital twins enable the continuous monitoring, simulation, and analysis of an object, product, or system throughout its lifecycle—from design and production to maintenance and decommissioning. They can also incorporate external processes and critical variables that affect an asset’s performance.
+                <p class="eyebrow" data-es="01 - CONCEPTO">01 - CONCEPT</p>
+                <h2 data-es="Un reflejo digital de un laboratorio que nunca se detiene.">A digital reflection of a lab
+                    that never stands still.</h2>
+                <p data-es="Un gemelo digital es una representación virtual de un objeto o sistema físico que utiliza datos en tiempo real para reflejar con precisión el comportamiento, el rendimiento y las condiciones de su equivalente en el mundo real. Los gemelos digitales permiten la monitorización, la simulación y el análisis continuos de un objeto, producto o sistema a lo largo de su ciclo de vida — desde el diseño y la producción hasta el mantenimiento y el desmantelamiento. También pueden incorporar procesos externos y variables críticas que afectan al rendimiento de un activo.">
+                    A digital twin is a virtual representation of a physical object or system that uses real-time data
+                    to accurately reflect the behavior, performance, and conditions of its real-world counterpart.
+                    Digital twins enable the continuous monitoring, simulation, and analysis of an object, product, or
+                    system throughout its lifecycle—from design and production to maintenance and decommissioning.
+                    They can also incorporate external processes and critical variables that affect an asset’s
+                    performance.
                 </p>
             </header>
             <div class="compare-block" data-reveal>
-                <h3>Three things that aren't the same!</h3>
+                <h3 data-es="¡Tres cosas que no son lo mismo!">Three things that aren't the same!</h3>
 
                 <ul class="compare">
                     <li>
-                        <h4>3D model</h4>
-                        <p>It is a geometric or visual representation of an object, space, or structure in three dimensions (X, Y, and Z axes). It is the model used in the lab for various purposes, such as 3D printing or modifying a design.</p>
+                        <h4 data-es="Modelo 3D">3D model</h4>
+                        <p data-es="Es una representación geométrica o visual de un objeto, espacio o estructura en tres dimensiones (ejes X, Y y Z). Es el modelo que se usa en el laboratorio para diversos fines, como la impresión 3D o la modificación de un diseño.">
+                            It is a geometric or visual representation of an object, space, or structure in three
+                            dimensions (X, Y, and Z axes). It is the model used in the lab for various purposes, such
+                            as 3D printing or modifying a design.</p>
                     </li>
                     <li>
-                        <h4>Dashboard</h4>
-                        <p>It is a graphical interface that displays metrics, key performance indicators (KPIs) and statistics in real time, through charts and tables. It cannot answer “what happens if…?”.</p>
+                        <h4 data-es="Panel de control">Dashboard</h4>
+                        <p data-es="Es una interfaz gráfica que muestra métricas, indicadores clave de rendimiento (KPI) y estadísticas en tiempo real, mediante gráficos y tablas. No puede responder «¿qué pasa si…?».">
+                            It is a graphical interface that displays metrics, key performance indicators (KPIs) and
+                            statistics in real time, through charts and tables. It cannot answer “what happens if…?”.</p>
                     </li>
                     <li>
-                        <h4>Digital twin</h4>
-                        <p>It is a dynamic virtual replica of a physical object, system or process. It connects geometry, live data and behaviour, so it can answer “what happens if…?” before anyone touches the equipment.</p>
+                        <h4 data-es="Gemelo digital">Digital twin</h4>
+                        <p data-es="Es una réplica virtual dinámica de un objeto, sistema o proceso físico. Conecta geometría, datos en vivo y comportamiento, por lo que puede responder «¿qué pasa si…?» antes de que alguien toque el equipo.">
+                            It is a dynamic virtual replica of a physical object, system or process. It connects
+                            geometry, live data and behaviour, so it can answer “what happens if…?” before anyone
+                            touches the equipment.</p>
                     </li>
                 </ul>
             </div>
             <div class="pillars" data-reveal>
                 <article class="pillar">
-                    <h3>Physical Asset</h3>
-                    <p>The machines, benches, sensors, and people at the Automation and Electronics Laboratory.</p>
+                    <h3 data-es="Activo físico">Physical Asset</h3>
+                    <p data-es="Las máquinas, bancos, sensores y personas del Laboratorio de Automatización y Electrónica.">
+                        The machines, benches, sensors, and people at the Automation and Electronics Laboratory.</p>
                 </article>
                 <article class="pillar">
-                    <h3>VIRTUAL MODEL</h3>
-                    <p>Geometry, physics, and operating rules that behave like the actual equipment</p>
+                    <h3 data-es="MODELO VIRTUAL">VIRTUAL MODEL</h3>
+                    <p data-es="Geometría, física y reglas de operación que se comportan como el equipo real.">Geometry,
+                        physics, and operating rules that behave like the actual equipment</p>
                 </article>
                 <article class="pillar">
-                    <h3>LIVE DATA</h3>
-                    <p>PLCs, IoT nodes, and session logs that transmit status and usage data at 1–10 Hz.</p>
+                    <h3 data-es="DATOS EN VIVO">LIVE DATA</h3>
+                    <p data-es="PLC, nodos IoT y registros de sesión que transmiten datos de estado y uso a 1–10 Hz.">
+                        PLCs, IoT nodes, and session logs that transmit status and usage data at 1–10 Hz.</p>
                 </article>
                 <article class="pillar">
-                    <h3>Feedback</h3>
-                    <p>Predictions and simulations that are fed back into the laboratory in the form of maintenance, planning, or teaching decisions.</p>
+                    <h3 data-es="Retroalimentación">Feedback</h3>
+                    <p data-es="Predicciones y simulaciones que vuelven al laboratorio en forma de decisiones de mantenimiento, planificación o docencia.">
+                        Predictions and simulations that are fed back into the laboratory in the form of maintenance,
+                        planning, or teaching decisions.</p>
                 </article>
             </div>
             <figure class="loop-figure" data-reveal>
                 <div class="loop">
                     <div class="loop-ring" aria-hidden="true"></div>
-                    <span class="loop-node n1">Physical lab</span>
-                    <span class="loop-node n2">Data stream</span>
-                    <span class="loop-node n3">Virtual twin</span>
-                    <span class="loop-node n4">Decisions</span>
-                    <div class="loop-center">Closed loop</div>
+                    <span class="loop-node n1" data-es="Laboratorio físico">Physical lab</span>
+                    <span class="loop-node n2" data-es="Flujo de datos">Data stream</span>
+                    <span class="loop-node n3" data-es="Gemelo virtual">Virtual twin</span>
+                    <span class="loop-node n4" data-es="Decisiones">Decisions</span>
+                    <div class="loop-center" data-es="Bucle cerrado">Closed loop</div>
                 </div>
-                <figcaption>Figure 1 — The lab feeds the model; the model returns decisions.</figcaption>
+                <figcaption data-es="Figura 1 — El laboratorio alimenta el modelo; el modelo devuelve decisiones.">
+                    Figure 1 — The lab feeds the model; the model returns decisions.</figcaption>
             </figure>
         </section>
 
         <section id="impact" class="section">
             <header class="section-head" data-reveal>
-                <p class="eyebrow">02 - IMPACT</p>
-                <h2>What the twin gives the lab</h2>
-                <p>For a teaching lab, the value is not the 3D view. It is recovered bench time, failures that never happen and lessons students can replay.</p>
+                <p class="eyebrow" data-es="02 - IMPACTO">02 - IMPACT</p>
+                <h2 data-es="Lo que el gemelo aporta al laboratorio">What the twin gives the lab</h2>
+                <p data-es="Para un laboratorio docente, el valor no es la vista 3D. Es el tiempo de banco recuperado, los fallos que nunca ocurren y las lecciones que los estudiantes pueden repetir.">
+                    For a teaching lab, the value is not the 3D view. It is recovered bench time, failures that never
+                    happen and lessons students can replay.</p>
             </header>
             <ul class="stats" data-reveal>
-                <li>24/7 remote access</li>
-                <li>+30% equipment availability</li>
-                <li>30% time saved per project</li>
-                <li>−35% unplanned downtime</li>
+                <li data-es="Acceso remoto 24/7">24/7 remote access</li>
+                <li data-es="+30 % de disponibilidad de equipos">+30% equipment availability</li>
+                <li data-es="30 % de tiempo ahorrado por proyecto">30% time saved per project</li>
+                <li data-es="−35 % de paradas no planificadas">−35% unplanned downtime</li>
             </ul>
-            <p class="stats-note">Projected impact for a first-year pilot.</p>
+            <p class="stats-note" data-es="Impacto proyectado para un piloto de primer año.">Projected impact for a
+                first-year pilot.</p>
             <div class="impact-grid" data-reveal>
                 <article class="impact-card">
-                    <h3>Predictive Maintenance</h3>
-                    <p>Based on the constant monitoring of equipment to detect anomalies using algorithms to predict failures before they occur.</p>
+                    <h3 data-es="Mantenimiento predictivo">Predictive Maintenance</h3>
+                    <p data-es="Basado en la monitorización constante de los equipos para detectar anomalías mediante algoritmos que predicen fallos antes de que ocurran.">
+                        Based on the constant monitoring of equipment to detect anomalies using algorithms to predict
+                        failures before they occur.</p>
                 </article>
                 <article class="impact-card">
-                    <h3>Cost Savings</h3>
-                    <p>Simulation in a virtual environment can directly lead to cost and time savings, resulting in greater efficiency and quality. Avoiding costly failures and optimizing processes also contributes to cost savings.</p>
+                    <h3 data-es="Ahorro de costes">Cost Savings</h3>
+                    <p data-es="La simulación en un entorno virtual puede generar directamente ahorros de coste y tiempo, lo que se traduce en mayor eficiencia y calidad. Evitar fallos costosos y optimizar procesos también contribuye al ahorro.">
+                        Simulation in a virtual environment can directly lead to cost and time savings, resulting in
+                        greater efficiency and quality. Avoiding costly failures and optimizing processes also
+                        contributes to cost savings.</p>
                 </article>
                 <article class="impact-card">
-                    <h3>Promoting Sustainability</h3>
-                    <p>Through simulation, the lab can identify environmental impacts, inefficient equipment or waste, and optimize the use of resources.</p>
+                    <h3 data-es="Impulsar la sostenibilidad">Promoting Sustainability</h3>
+                    <p data-es="Mediante la simulación, el laboratorio puede identificar impactos ambientales, equipos ineficientes o residuos, y optimizar el uso de los recursos.">
+                        Through simulation, the lab can identify environmental impacts, inefficient equipment or waste,
+                        and optimize the use of resources.</p>
                 </article>
                 <article class="impact-card">
-                    <h3>Simulation before installation</h3>
-                    <p>Before a new bench or layout is installed, the twin can test it: space, power, airflow and workflow, without moving a single machine.</p>
+                    <h3 data-es="Simulación antes de la instalación">Simulation before installation</h3>
+                    <p data-es="Antes de instalar un nuevo banco o distribución, el gemelo puede probarlo: espacio, potencia, flujo de aire y flujo de trabajo, sin mover una sola máquina.">
+                        Before a new bench or layout is installed, the twin can test it: space, power, airflow and
+                        workflow, without moving a single machine.</p>
                 </article>
                 <article class="impact-card">
-                    <h3>Safe fault practice</h3>
-                    <p>Students inject a jam, a sensor failure or an emergency stop and diagnose it in the model, without risking the equipment.</p>
+                    <h3 data-es="Práctica segura de fallos">Safe fault practice</h3>
+                    <p data-es="Los estudiantes provocan un atasco, un fallo de sensor o una parada de emergencia y lo diagnostican en el modelo, sin poner en riesgo el equipo.">
+                        Students inject a jam, a sensor failure or an emergency stop and diagnose it in the model,
+                        without risking the equipment.</p>
                 </article>
                 <article class="impact-card">
-                    <h3>Industry-ready students</h3>
-                    <p>Students work with the same stack used in Industry 4.0 plants: OPC UA, MQTT and digital twins.</p>
+                    <h3 data-es="Estudiantes listos para la industria">Industry-ready students</h3>
+                    <p data-es="Los estudiantes trabajan con el mismo stack que se usa en plantas de Industria 4.0: OPC UA, MQTT y gemelos digitales.">
+                        Students work with the same stack used in Industry 4.0 plants: OPC UA, MQTT and digital twins.
+                    </p>
                 </article>
             </div>
         </section>
 
         <section id="twin" class="section">
             <header class="section-head" data-reveal>
-                <p class="eyebrow">03 - LIVE PREVIEW</p>
-                <h2>Walk through the twin</h2>
-                <p>Orbit the room, open an asset and watch its condition change. The panel shows the same variables a real twin would read from the PLC.</p>
-                <p>The model is not connected to physical equipment. All telemetry is simulated.</p>
+                <p class="eyebrow" data-es="03 - VISTA EN VIVO">03 - LIVE PREVIEW</p>
+                <h2 data-es="Recorre el gemelo">Walk through the twin</h2>
+                <p data-es="Gira la sala, selecciona un activo y observa cómo cambia su estado. El panel muestra las mismas variables que un gemelo real leería del PLC.">
+                    Rotate the room, select an asset and watch its condition change. The panel shows the same variables
+                    a real twin would read from the PLC.</p>
+                <p data-es="El modelo no está conectado a equipos físicos. Toda la telemetría es simulada.">The model is
+                    not connected to physical equipment. All telemetry is simulated.</p>
             </header>
+
+            <div class="asset-tabs" role="group" aria-label="Monitored assets" data-es-aria="Activos monitorizados"
+                data-reveal>
+                <button type="button" class="asset-tab is-active" data-asset="0" aria-pressed="true"
+                    data-es="Célula robótica">Robot cell</button>
+                <button type="button" class="asset-tab" data-asset="1" aria-pressed="false"
+                    data-es="Transportador">Conveyor</button>
+                <button type="button" class="asset-tab" data-asset="2" aria-pressed="false"
+                    data-es="Armario PLC">PLC cabinet</button>
+                <button type="button" class="asset-tab" data-asset="3" aria-pressed="false" data-es="Fresadora CNC">CNC
+                    mill</button>
+                <button type="button" class="asset-tab" data-asset="4" aria-pressed="false"
+                    data-es="Banco de electrónica">Electronics bench</button>
+                <button type="button" class="asset-tab" data-asset="5" aria-pressed="false"
+                    data-es="Banco de pruebas">Test rig</button>
+            </div>
+
             <div class="twin-stage" data-reveal>
                 <figure class="twin-view">
-                    <canvas>This demo needs WebGL. The asset data is still available below.</canvas>
-                    <figcaption>Simulated telemetry · not connected to real equipment.</figcaption>
+                    <canvas role="img"
+                        aria-label="Isometric view of the laboratory with six monitored assets. Drag to rotate and click an asset to inspect it."
+                        data-es-aria="Vista isométrica del laboratorio con seis activos monitorizados. Arrastra para girar y haz clic en un activo para inspeccionarlo.">Your
+                        browser does not support canvas. The asset readings are still available in the panel.</canvas>
+                    <p class="twin-hint" data-es="Arrastra para girar · Clic en un activo">Drag to rotate · Click an
+                        asset</p>
+                    <figcaption data-es="Telemetría simulada · sin conexión a equipos reales.">Simulated telemetry · not
+                        connected to real equipment.</figcaption>
                 </figure>
                 <aside class="twin-panel">
-                    <p class="panel-kicker">ASSET 01 · ROBOT CELL</p>
-                    <h3>Six-axis robot</h3>
-                    <p class="panel-status">Nominal</p>
+                    <p class="panel-kicker"><span data-live="kicker">ASSET 01 · ROBOT CELL</span></p>
+                    <h3 data-live="name">Six-axis robot</h3>
+                    <p class="panel-status is-nominal" data-live="status">Nominal</p>
                     <dl>
-                        <div><dt>Temperature</dt><dd>42.6 °C</dd></div>
-                        <div><dt>Vibration</dt><dd>0.82 mm/s</dd></div>
-                        <div><dt>Power</dt><dd>1.8 kW</dd></div>
-                        <div><dt>Remaining life</dt><dd>128 h</dd></div>
+                        <div>
+                            <dt data-es="Temperatura">Temperature</dt>
+                            <dd data-metric="temp">42.6 °C</dd>
+                        </div>
+                        <div>
+                            <dt data-es="Vibración">Vibration</dt>
+                            <dd data-metric="vib">0.82 mm/s</dd>
+                        </div>
+                        <div>
+                            <dt data-es="Potencia">Power</dt>
+                            <dd data-metric="power">1.8 kW</dd>
+                        </div>
+                        <div>
+                            <dt data-es="Vida útil restante">Remaining life</dt>
+                            <dd data-metric="life">128 h</dd>
+                        </div>
                     </dl>
-                    <p class="panel-sync">Last sync 0.4 s ago</p>
+                    <p class="panel-sync" data-live="sync">Last sync · 0.4 s ago</p>
                 </aside>
             </div>
             <ul class="twin-log" data-reveal>
-                <li><time>08:42</time> Robot cell: axis 2 temperature above baseline.</li>
-                <li><time>08:41</time> Conveyor: part count reached 1,240.</li>
-                <li><time>08:40</time> PLC cabinet: all I/O modules online.</li>
-                <li><time>08:39</time> Twin state synchronised with edge gateway.</li>
+                <li><time>08:42</time><span data-es="Célula robótica: temperatura del eje 2 por encima de la línea base.">Robot
+                        cell: axis 2 temperature above baseline.</span></li>
+                <li><time>08:41</time><span data-es="Transportador: contador de piezas en 1.240.">Conveyor: part count
+                        reached 1,240.</span></li>
+                <li><time>08:40</time><span data-es="Armario PLC: todos los módulos de E/S en línea.">PLC cabinet: all
+                        I/O modules online.</span></li>
+                <li><time>08:39</time><span data-es="Estado del gemelo sincronizado con la pasarela edge.">Twin state
+                        synchronised with edge gateway.</span></li>
             </ul>
         </section>
 
         <section id="stack" class="section">
             <header class="section-head" data-reveal>
-                <p class="eyebrow">04 - THE STACK</p>
-                <h2>From sensor to decision in four hops.</h2>
-                <p>No proprietary lock-in: the pilot starts with one bench and grows one asset at a time.</p>
+                <p class="eyebrow" data-es="04 - LA ARQUITECTURA">04 - THE STACK</p>
+                <h2 data-es="Del sensor a la decisión en cuatro saltos.">From sensor to decision in four hops.</h2>
+                <p data-es="Sin dependencia de proveedores: el piloto empieza con un banco y crece un activo a la vez.">
+                    No proprietary lock-in: the pilot starts with one bench and grows one asset at a time.</p>
             </header>
             <ol class="flow" data-reveal>
                 <li class="flow-step">
-                    <h3>Instrument</h3>
-                    <p>Current clamps, vibration sensors and temperature probes, plus the tags the PLC already exposes.</p>
+                    <h3 data-es="Instrumentar">Instrument</h3>
+                    <p data-es="Pinzas amperimétricas, sensores de vibración y sondas de temperatura, además de las variables que el PLC ya expone.">
+                        Current clamps, vibration sensors and temperature probes, plus the tags the PLC already exposes.
+                    </p>
                 </li>
                 <li class="flow-step">
-                    <h3>Edge</h3>
-                    <p>An industrial gateway samples at 1–10 Hz and publishes a time-stamped stream over MQTT or OPC UA.</p>
+                    <h3 data-es="Edge">Edge</h3>
+                    <p data-es="Una pasarela industrial muestrea a 1–10 Hz y publica un flujo con marca de tiempo por MQTT u OPC UA.">
+                        An industrial gateway samples at 1–10 Hz and publishes a time-stamped stream over MQTT or OPC UA.
+                    </p>
                 </li>
                 <li class="flow-step">
-                    <h3>Twin</h3>
-                    <p>The model ingests telemetry, runs its behaviour rules and updates the state of every asset.</p>
+                    <h3 data-es="Gemelo">Twin</h3>
+                    <p data-es="El modelo ingiere la telemetría, ejecuta sus reglas de comportamiento y actualiza el estado de cada activo.">
+                        The model ingests telemetry, runs its behaviour rules and updates the state of every asset.</p>
                 </li>
                 <li class="flow-step">
-                    <h3>Act</h3>
-                    <p>Dashboards, alerts, maintenance schedules and classroom exercises consume the result.</p>
+                    <h3 data-es="Actuar">Act</h3>
+                    <p data-es="Paneles, alertas, planes de mantenimiento y ejercicios de clase consumen el resultado.">
+                        Dashboards, alerts, maintenance schedules and classroom exercises consume the result.</p>
                 </li>
             </ol>
         </section>
 
         <section id="roadmap" class="section">
             <header class="section-head" data-reveal>
-                <p class="eyebrow">05 - THE PLAN</p>
-                <h2>Start with one bench.</h2>
-                <p>A full lab twin is a programme, not a purchase. Three phases, each useful on its own.</p>
+                <p class="eyebrow" data-es="05 - EL PLAN">05 - THE PLAN</p>
+                <h2 data-es="Empieza con un banco.">Start with one bench.</h2>
+                <p data-es="Un gemelo de laboratorio completo es un programa, no una compra. Tres fases, cada una útil por sí misma.">
+                    A full lab twin is a programme, not a purchase. Three phases, each useful on its own.</p>
             </header>
             <ol class="phases" data-reveal>
                 <li class="phase">
-                    <h3>Phase 01 — Instrument one bench</h3>
-                    <p>Weeks 1–6. Add 8–12 sensors to the robot cell and publish the tags the PLC already knows. Output: one live data stream.</p>
+                    <h3 data-es="Fase 01 — Instrumentar un banco">Phase 01 — Instrument one bench</h3>
+                    <p data-es="Semanas 1–6. Añade 8–12 sensores a la célula robótica y publica las variables que el PLC ya conoce. Resultado: un flujo de datos en vivo.">
+                        Weeks 1–6. Add 8–12 sensors to the robot cell and publish the tags the PLC already knows.
+                        Output: one live data stream.</p>
                 </li>
                 <li class="phase">
-                    <h3>Phase 02 — Build the twin</h3>
-                    <p>Weeks 7–16. Model the geometry, encode the operating states and connect this dashboard to real data. Output: a connected twin.</p>
+                    <h3 data-es="Fase 02 — Construir el gemelo">Phase 02 — Build the twin</h3>
+                    <p data-es="Semanas 7–16. Modela la geometría, codifica los estados de operación y conecta este panel a datos reales. Resultado: un gemelo conectado.">
+                        Weeks 7–16. Model the geometry, encode the operating states and connect this dashboard to real
+                        data. Output: a connected twin.</p>
                 </li>
                 <li class="phase">
-                    <h3>Phase 03 — Predict and teach</h3>
-                    <p>Months 5–9. Train simple failure models on the collected history and turn them into course material. Output: a predictive lab.</p>
+                    <h3 data-es="Fase 03 — Predecir y enseñar">Phase 03 — Predict and teach</h3>
+                    <p data-es="Meses 5–9. Entrena modelos de fallo sencillos con el historial recogido y conviértelos en material de curso. Resultado: un laboratorio predictivo.">
+                        Months 5–9. Train simple failure models on the collected history and turn them into course
+                        material. Output: a predictive lab.</p>
                 </li>
             </ol>
         </section>
 
         <section id="closing" class="section closing">
             <header class="section-head" data-reveal>
-                <p class="eyebrow">06 - TAKEAWAY</p>
-                <h2>The lab already holds the data. The twin gives it a voice.</h2>
-                <p>Every cable, sensor and session in the laboratory produces a signal. A digital twin turns those signals into understanding — for the people who maintain the lab and for the students who learn inside it.</p>
+                <p class="eyebrow" data-es="06 - CONCLUSIÓN">06 - TAKEAWAY</p>
+                <h2 data-es="El laboratorio ya guarda los datos. El gemelo les da voz.">The lab already holds the data.
+                    The twin gives it a voice.</h2>
+                <p data-es="Cada cable, sensor y sesión del laboratorio produce una señal. Un gemelo digital convierte esas señales en comprensión — para quienes mantienen el laboratorio y para los estudiantes que aprenden dentro de él.">
+                    Every cable, sensor and session in the laboratory produces a signal. A digital twin turns those
+                    signals into understanding — for the people who maintain the lab and for the students who learn
+                    inside it.</p>
             </header>
-            <a class="btn btn--primary" href="#twin" data-reveal>Replay the twin</a>
+            <a class="btn btn--primary" href="#twin" data-reveal data-es="Repetir el gemelo">Replay the twin</a>
         </section>
     </main>
 
 
     <footer class="site-footer">
-        <p>DigiTwin — Digital Twin Lab</p>
-        <p>English project · Faculty of Engineering · 2026</p>
+        <p data-es="DigiTwin — Laboratorio de Gemelos Digitales">DigiTwin — Digital Twin Lab</p>
+        <p data-es="Proyecto de Inglés · Samuel David Ospino Bolaño · Facultad de Ingeniería · 2026">English project · Faculty of Engineering · Samuel David Ospino Bolaño
+            2026</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script type="importmap">
-{ "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-} }
-</script>
 
 </body>
 
