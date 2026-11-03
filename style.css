@@ -7,8 +7,9 @@
    5. Components (nav, buttons, language switch)
    6. Hero
    7. Sections
-   8. Responsive
-   9. Motion
+   8. Scroll effects
+   9. Responsive
+   10. Motion
    ========================================================================== */
 
 /* 1. Tokens ---------------------------------------------------------------- */
@@ -200,6 +201,11 @@ section[id] {
     background: color-mix(in srgb, var(--ink) 88%, transparent);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(14px);
+}
+
+.site-header.is-scrolled {
+    background: color-mix(in srgb, var(--ink) 96%, transparent);
+    box-shadow: 0 12px 30px -24px #000;
 }
 
 .site-nav {
@@ -810,7 +816,32 @@ section[id] {
     color: var(--muted);
 }
 
-/* 8. Responsive ------------------------------------------------------------ */
+/* 8. Scroll effects -------------------------------------------------------- */
+.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+}
+
+/* 9. Responsive ------------------------------------------------------------ */
 @media (max-width: 1000px) {
     .pillars {
         grid-template-columns: repeat(2, 1fr);
@@ -882,7 +913,7 @@ section[id] {
     }
 }
 
-/* 9. Motion ---------------------------------------------------------------- */
+/* 10. Motion --------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -894,5 +925,11 @@ section[id] {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .js [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }

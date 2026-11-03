@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add("js");</script>
     <meta name="description"
         content="An interactive digital twin of the Engineering Laboratory: what it is, why it matters and a navigable 3D preview.">
     <meta name="author" content="Samuel Ospino">
@@ -40,7 +41,7 @@
     <main id="main" tabindex="-1">
 
         <section id="top" class="section hero">
-            <div class="hero-copy">
+            <div class="hero-copy" data-reveal>
                 <p class="eyebrow">Digital twin · Automation &amp; Electronics Lab</p>
                 <h1>Test the lab before you touch it!</h1>
                 <p class="hero-lede">The lab runs dozens of projects every year. A digital twin gives students a
@@ -60,14 +61,14 @@
         </section>
 
         <section id="definition" class="section">
-            <header class="section-head">
+            <header class="section-head" data-reveal>
                 <p class="eyebrow">01 - CONCEPT</p>
                 <h2>A digital reflection of a lab that never stands still.</h2>
                 <p>A digital twin is a virtual representation of a physical object or system that uses real-time data to accurately reflect the behavior, performance, and conditions of its real-world counterpart.
                     Digital twins enable the continuous monitoring, simulation, and analysis of an object, product, or system throughout its lifecycle—from design and production to maintenance and decommissioning. They can also incorporate external processes and critical variables that affect an asset’s performance.
                 </p>
             </header>
-            <div class="compare-block">
+            <div class="compare-block" data-reveal>
                 <h3>Three things that aren't the same!</h3>
 
                 <ul class="compare">
@@ -85,7 +86,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="pillars">
+            <div class="pillars" data-reveal>
                 <article class="pillar">
                     <h3>Physical Asset</h3>
                     <p>The machines, benches, sensors, and people at the Automation and Electronics Laboratory.</p>
@@ -103,7 +104,7 @@
                     <p>Predictions and simulations that are fed back into the laboratory in the form of maintenance, planning, or teaching decisions.</p>
                 </article>
             </div>
-            <figure class="loop-figure">
+            <figure class="loop-figure" data-reveal>
                 <div class="loop">
                     <div class="loop-ring" aria-hidden="true"></div>
                     <span class="loop-node n1">Physical lab</span>
@@ -117,19 +118,19 @@
         </section>
 
         <section id="impact" class="section">
-            <header class="section-head">
+            <header class="section-head" data-reveal>
                 <p class="eyebrow">02 - IMPACT</p>
                 <h2>What the twin gives the lab</h2>
                 <p>For a teaching lab, the value is not the 3D view. It is recovered bench time, failures that never happen and lessons students can replay.</p>
             </header>
-            <ul class="stats">
+            <ul class="stats" data-reveal>
                 <li>24/7 remote access</li>
                 <li>+30% equipment availability</li>
                 <li>30% time saved per project</li>
                 <li>−35% unplanned downtime</li>
             </ul>
             <p class="stats-note">Projected impact for a first-year pilot.</p>
-            <div class="impact-grid">
+            <div class="impact-grid" data-reveal>
                 <article class="impact-card">
                     <h3>Predictive Maintenance</h3>
                     <p>Based on the constant monitoring of equipment to detect anomalies using algorithms to predict failures before they occur.</p>
@@ -158,13 +159,13 @@
         </section>
 
         <section id="twin" class="section">
-            <header class="section-head">
+            <header class="section-head" data-reveal>
                 <p class="eyebrow">03 - LIVE PREVIEW</p>
                 <h2>Walk through the twin</h2>
                 <p>Orbit the room, open an asset and watch its condition change. The panel shows the same variables a real twin would read from the PLC.</p>
                 <p>The model is not connected to physical equipment. All telemetry is simulated.</p>
             </header>
-            <div class="twin-stage">
+            <div class="twin-stage" data-reveal>
                 <figure class="twin-view">
                     <canvas>This demo needs WebGL. The asset data is still available below.</canvas>
                     <figcaption>Simulated telemetry · not connected to real equipment.</figcaption>
@@ -182,7 +183,7 @@
                     <p class="panel-sync">Last sync 0.4 s ago</p>
                 </aside>
             </div>
-            <ul class="twin-log">
+            <ul class="twin-log" data-reveal>
                 <li><time>08:42</time> Robot cell: axis 2 temperature above baseline.</li>
                 <li><time>08:41</time> Conveyor: part count reached 1,240.</li>
                 <li><time>08:40</time> PLC cabinet: all I/O modules online.</li>
@@ -191,12 +192,12 @@
         </section>
 
         <section id="stack" class="section">
-            <header class="section-head">
+            <header class="section-head" data-reveal>
                 <p class="eyebrow">04 - THE STACK</p>
                 <h2>From sensor to decision in four hops.</h2>
                 <p>No proprietary lock-in: the pilot starts with one bench and grows one asset at a time.</p>
             </header>
-            <ol class="flow">
+            <ol class="flow" data-reveal>
                 <li class="flow-step">
                     <h3>Instrument</h3>
                     <p>Current clamps, vibration sensors and temperature probes, plus the tags the PLC already exposes.</p>
@@ -217,12 +218,12 @@
         </section>
 
         <section id="roadmap" class="section">
-            <header class="section-head">
+            <header class="section-head" data-reveal>
                 <p class="eyebrow">05 - THE PLAN</p>
                 <h2>Start with one bench.</h2>
                 <p>A full lab twin is a programme, not a purchase. Three phases, each useful on its own.</p>
             </header>
-            <ol class="phases">
+            <ol class="phases" data-reveal>
                 <li class="phase">
                     <h3>Phase 01 — Instrument one bench</h3>
                     <p>Weeks 1–6. Add 8–12 sensors to the robot cell and publish the tags the PLC already knows. Output: one live data stream.</p>
@@ -239,12 +240,12 @@
         </section>
 
         <section id="closing" class="section closing">
-            <header class="section-head">
+            <header class="section-head" data-reveal>
                 <p class="eyebrow">06 - TAKEAWAY</p>
                 <h2>The lab already holds the data. The twin gives it a voice.</h2>
                 <p>Every cable, sensor and session in the laboratory produces a signal. A digital twin turns those signals into understanding — for the people who maintain the lab and for the students who learn inside it.</p>
             </header>
-            <a class="btn btn--primary" href="#twin">Replay the twin</a>
+            <a class="btn btn--primary" href="#twin" data-reveal>Replay the twin</a>
         </section>
     </main>
 
@@ -255,6 +256,12 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
 
 </body>
 
